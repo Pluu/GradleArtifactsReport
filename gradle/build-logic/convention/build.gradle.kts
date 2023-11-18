@@ -15,9 +15,9 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("androidApplication") {
-            id = "app.pluu.android.application"
-            implementationClass = "com.pluu.convention.AndroidApplicationConventionPlugin"
+        register("artifactMonitoring") {
+            id = "app.pluu.artifactMonitoring"
+            implementationClass = "com.pluu.convention.PluuArtifactMonitoringConventionPlugin"
         }
     }
 }

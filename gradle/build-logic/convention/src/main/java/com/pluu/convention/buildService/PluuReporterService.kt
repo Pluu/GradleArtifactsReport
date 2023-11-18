@@ -38,9 +38,9 @@ abstract class PluuReporterService : BuildService<PluuReporterService.Params>,
 
     private fun logBuildStats() {
         val buildTaskService = parameters.getBuildTaskServiceProvider().get().get()
-        val buildReport = getBuildReport(buildTaskService)
+        val buildReport = getBuildReport(buildTaskService) ?: return
         val logger = Logging.getLogger("console-logger")
-        logger.lifecycle(buildReport.toString())
+        logger.lifecycle(buildReport)
     }
 
     private fun getBuildReport(
